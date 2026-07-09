@@ -1,6 +1,6 @@
 :root {
   /* gap */
-  --body-gap: 2rem;
+  --body-gap: 1rem;
   --main-gap: 1.5rem;
 
   /* header */
@@ -9,6 +9,32 @@
   /* main */
   --main-max-width: 400px;
   --main-padding: 0 24px;
+
+  /* form */
+  --form-gap: 1rem;
+  --form-width: 100%;
+
+  /* input */
+  --input-padding: 0.75rem 1.5rem;
+  --input-button-width: 100%;
+
+  /* border */
+  --border-radius: 100vw;
+  --border: 1px solid var(--blue-200);
+
+  /* button */
+  --button-padding: 0.75rem 1.5rem;
+  --button-color: hsl(0, 0%, 100%);
+  --button-font-weight: 700;
+
+  /* social icons */
+  --icon-size: 20px;
+  --social-icon-width: var(--icon-size);
+  --social-icon-height: var(--icon-size);
+  --social-icon-gap: 1rem;
+
+  /* footer */
+  --footer-gap: 1rem;
 
   /* fonts */
   --font-family: "Libre Franklin";
@@ -143,6 +169,47 @@ h1 strong {
   color: var(--blue-950);
   font-weight: var(--font-weight-bold);
 }
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--form-gap);
+  width: var(--form-width);
+}
+
+input {
+  padding: var(--input-padding);
+  border: var(--border);
+  border-radius: var(--border-radius);
+  color: var(--blue-950);
+}
+
+input::placeholder {
+  color: var(--blue-200);
+}
+
+button {
+  padding: var(--button-padding);
+  border: none;
+  border-radius: var(--border-radius);
+  background-color: var(--blue-500);
+  color: var(--button-color);
+  font-weight: var(--button-font-weight);
+  cursor: pointer;
+}
+
+input,
+button {
+  width: var(--input-button-width);
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--footer-gap);
+}
+
 /*
   10. Create a root stacking context
 */
@@ -162,4 +229,14 @@ h1 strong {
 
 .dashboard-image {
   margin-top: 2rem;
+}
+
+.social-icons {
+  display: flex;
+  gap: var(--social-icon-gap);
+}
+
+.social-icons img {
+  width: var(--social-icon-width);
+  height: var(--social-icon-height);
 }
