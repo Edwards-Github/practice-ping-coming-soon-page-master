@@ -22,7 +22,10 @@
       <h1>We are launching <strong>soon!</strong></h1>
       <p>Subscribe and get notified</p>
       <form>
-        <input type="email" placeholder="Your email address..." />
+        <div class="input-group">
+          <input type="email" placeholder="Your email address..." />
+          <p class="error-message">Please provide a valid email address</p>
+        </div>
         <button>Notify Me</button>
       </form>
       <img
@@ -34,21 +37,15 @@
 
     <footer class="attribution">
       <div class="social-icons">
-        <img
-          src="assets/images/facebook-f-brands-solid-full.svg"
-          alt="facebook"
-        />
-        <img src="assets/images/twitter-brands-solid-full.svg" alt="twitter" />
-        <img
-          src="assets/images/instagram-brands-solid-full.svg"
-          alt="instagram"
-        />
+        <div class="icon-circle"><span class="icon icon-facebook"></span></div>
+        <div class="icon-circle"><span class="icon icon-twitter"></span></div>
+        <div class="icon-circle"><span class="icon icon-instagram"></span></div>
       </div>
       <p>&copy; Copyright Ping. All rights reserved.</p>
       <p>
         Challenge by
         <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a
-        >. Coded by <a href="#">Your Name Here</a>.
+        >. Coded by <a href="#">Edward</a>.
       </p>
     </footer>
   </body>

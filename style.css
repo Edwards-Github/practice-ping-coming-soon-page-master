@@ -18,12 +18,16 @@
   --input-padding: 0.75rem 1.5rem;
   --input-button-width: 100%;
 
+  /* error message */
+  --error-message-font-style: italic;
+  --error-message-font-size: 0.875rem;
+
   /* border */
   --border-radius: 100vw;
   --border: 1px solid var(--blue-200);
 
   /* button */
-  --button-padding: 0.75rem 1.5rem;
+  --button-padding: 0.75em 1.5em;
   --button-color: hsl(0, 0%, 100%);
   --button-font-weight: 700;
 
@@ -32,9 +36,13 @@
   --social-icon-width: var(--icon-size);
   --social-icon-height: var(--icon-size);
   --social-icon-gap: 1rem;
+  --social-icon-circle-width: 36px;
+  --social-icon-circle-height: 36px;
+  --social-icon-circle-border-radius: 50%;
+  --social-icon-circle-border: 1px solid var(--blue-200);
 
   /* footer */
-  --footer-gap: 1rem;
+  --footer-gap: 0.5rem;
 
   /* fonts */
   --font-family: "Libre Franklin";
@@ -188,6 +196,17 @@ input::placeholder {
   color: var(--blue-200);
 }
 
+.error-message {
+  display: none;
+  color: var(--red-400);
+  font-style: var(--error-message-font-style);
+  font-size: var(--error-message-font-size);
+}
+
+.error-message.visible {
+  display: block;
+}
+
 button {
   padding: var(--button-padding);
   border: none;
@@ -236,7 +255,33 @@ footer {
   gap: var(--social-icon-gap);
 }
 
-.social-icons img {
+.icon-circle {
+  width: var(--social-icon-circle-width);
+  height: var(--social-icon-circle-height);
+  border-radius: var(--social-icon-circle-border-radius);
+  border: var(--social-icon-circle-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
   width: var(--social-icon-width);
   height: var(--social-icon-height);
+  background-color: var(
+    --blue-500
+  ); /* the "pumpkin" — the color that shows through */
+  mask-repeat: no-repeat; /* one icon, not tiled */
+  mask-size: contain; /* scale the shape to fit the box */
+  border: 1px solid var(--blue-500);
+}
+
+.icon-facebook {
+  mask-image: url("assets/images/facebook-f-brands-solid-full.svg"); /* the stencil */
+}
+.icon-twitter {
+  mask-image: url("assets/images/twitter-brands-solid-full.svg"); /* the stencil */
+}
+.icon-instagram {
+  mask-image: url("assets/images/instagram-brands-solid-full.svg"); /* the stencil */
 }
