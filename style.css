@@ -15,7 +15,8 @@
   --form-width: 100%;
 
   /* input */
-  --input-padding: 0.75rem 1.5rem;
+  --input-padding-inline: 1.5rem;
+  --input-padding: 0.75rem var(--input-padding-inline);
   --input-button-width: 100%;
 
   /* error message */
@@ -61,6 +62,10 @@
   /* Neutral */
   --gray-400: hsl(0, 0%, 59%);
   --blue-950: hsl(209, 33%, 12%);
+
+  /* Desktop variables */
+  --desktop-main-max-width: calc(var(--main-max-width) * 1.5);
+  --desktop-header-font-size: calc(var(--header-font-size) * 1.5);
 }
 
 @font-face {
@@ -201,6 +206,7 @@ input::placeholder {
   color: var(--red-400);
   font-style: var(--error-message-font-style);
   font-size: var(--error-message-font-size);
+  text-align: center;
 }
 
 .error-message.visible {
@@ -284,4 +290,37 @@ footer {
 }
 .icon-instagram {
   mask-image: url("assets/images/instagram-brands-solid-full.svg"); /* the stencil */
+}
+
+@media (min-width: 768px) {
+  /* desktop overrides go here */
+  main {
+    max-width: var(--desktop-main-max-width);
+  }
+
+  h1 {
+    font-size: var(--desktop-header-font-size);
+  }
+
+  form {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+  }
+
+  button {
+    padding: var(--input-padding);
+  }
+
+  footer {
+    margin-block: 2rem;
+  }
+
+  .error-message {
+    text-align: start;
+    padding-inline-start: var(--input-padding-inline);
+  }
+
+  .social-icons {
+    margin-block: 1rem;
+  }
 }

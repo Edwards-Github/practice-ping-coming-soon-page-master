@@ -11,6 +11,7 @@
       href="./images/favicon-32x32.png"
     />
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
     <title>Frontend Mentor | Ping coming soon page</title>
   </head>
   <body>
@@ -23,7 +24,12 @@
       <p>Subscribe and get notified</p>
       <form>
         <div class="input-group">
-          <input type="email" placeholder="Your email address..." />
+          <input
+            type="email"
+            class="email"
+            placeholder="Your email address..."
+            required
+          />
           <p class="error-message">Please provide a valid email address</p>
         </div>
         <button>Notify Me</button>
