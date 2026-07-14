@@ -29,7 +29,7 @@ Users should be able to:
 
 ### Screenshot
 
-
+<img width="1791" height="945" alt="Capture" src="https://github.com/user-attachments/assets/ace438af-2c69-4fe1-9273-47a3efa4e4b9" />
 
 ### Links
 
